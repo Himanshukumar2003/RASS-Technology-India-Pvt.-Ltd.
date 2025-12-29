@@ -39,3 +39,27 @@ document.getElementById("orderForm").addEventListener("submit", function (e) {
 
   this.reset();
 });
+
+var swiper = new Swiper(".swiper-container", {
+  slidesPerView: 4, // Number of products visible at once
+  spaceBetween: 30, // Space between items
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    // Responsive settings
+    1200: {
+      slidesPerView: 4,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    576: {
+      slidesPerView: 1,
+    },
+  },
+});
