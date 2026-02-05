@@ -1,6 +1,14 @@
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".custom-navbar");
-  navbar.classList.toggle("scrolled", window.scrollY > 100);
+  const logo = document.querySelector(".navbar-brand img");
+
+  if (window.scrollY > 100) {
+    navbar.classList.add("scrolled");
+    logo.src = "img/logo.png"; // scroll ke baad
+  } else {
+    navbar.classList.remove("scrolled");
+    logo.src = "img/logo-white.png"; // default
+  }
 });
 
 // Buy Now click → same product ke h2 se title uthao

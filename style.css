@@ -3,12 +3,14 @@
 /* Root Variables */
 :root {
     /* Primary Colors */
-    --primary-green: #7ed957;
-    --primary-green-hover: #6bc947;
-    --primary-green-dark: #6bbd45;
-    --primary-green-darker: #5aa838;
-    
-            --dark-green: #7cb342;
+--primary-green: #EF0524;
+--primary-green-hover: #d90420;
+--primary-green-dark: #c8031c;
+--primary-green-darker: #a90218;
+--dark-blue: #1b2253;
+
+--dark-green: #1b2253;
+
             --text-dark: #2c3e50;
            
     /* Background Colors */
@@ -33,12 +35,12 @@
     --border-card: #dde1de;
     
     /* Accent Colors */
-    --accent-orange: #ffa726;
-    --accent-orange-light: #ffa03a;
+    --accent-orange: #2c3e50;
+    --accent-orange-light: #2c3e50;
     
     /* Card Background Colors */
     --card-teal: #cce0ff;
-    --card-beige: #d0f0c0;
+    --card-beige: #e26a6a;
     --card-pink: #fff4b3;
     
     /* Feature Colors */
@@ -60,17 +62,17 @@
     --white-alpha-4: rgba(255, 255, 255, 0.3);
     --white-alpha-5: rgba(255, 255, 255, 0.8);
     --white-alpha-6: rgba(255, 255, 255, 0.9);
-    --green-alpha: rgba(126, 217, 87, 0.1);
-    --green-alpha-light: rgba(126, 217, 87, 0.4);
-    --green-alpha-lighter: rgba(107, 189, 69, 0.1);
-    --green-alpha-fade: rgba(76, 175, 80, 0.3);
+    --green-alpha: rgba(225, 116, 72, 0.1);
+    --green-alpha-light: rgba(217, 120, 87, 0.4);
+    --green-alpha-lighter: rgba(232, 107, 44, 0.1);
+    --green-alpha-fade: rgba(224, 129, 114, 0.3);
     --black-alpha: rgba(0, 0, 0, 0.2);
     
     /* Gradients */
 
       --highlight-color: #ffdbcc;
 
-    --gradient-green: linear-gradient(135deg, #7ed957, #4CAF50);
+    --gradient-green: linear-gradient(135deg, var(--primary-green), var(--primary-green-hover));
     
     /* Border Radius */
     --radius-sm: 4px;
@@ -115,6 +117,12 @@ body {
     font-family: 'Roboto', sans-serif;
    
 }
+
+.navbar-brand img {
+  height: 48px;
+  transition: all 0.3s ease;
+}
+
 
 .explore-btn {
     display: inline-flex;
@@ -187,8 +195,15 @@ body {
 }
 
 .navbar-brand {
-    color: var(--text-white) !important;
-    font-size: var(--font-xl);
+   width: 120px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.navbar-brand img{
+    width: 100%;
 }
 
 .nav-link {
@@ -1976,8 +1991,7 @@ color: #51f201;
         }
 
   .product-details {
-            padding: 60px 0;
-            min-height: 100vh;
+            padding: 20px 0;
         }
 
         .product-img {
@@ -2935,7 +2949,7 @@ mix-blend-mode: multiply;
             transition: all 0.3s ease;
         }
 .card-overlay-two{
-              background-color: rgba(10, 201, 10, 0.5);
+              background-color: rgba(228, 39, 39, 0.5);
 
 
 }
@@ -3304,6 +3318,8 @@ max-height: 400px;
             display: grid;
             grid-template-columns: 1fr 1.5fr;
             gap: 0px;
+            max-width: 1000px;
+            margin: auto;
             align-items: start;
         }
 
@@ -3361,7 +3377,7 @@ max-height: 400px;
 
         .team-members {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(1, 1fr);
             gap: 0px;
         }
 
