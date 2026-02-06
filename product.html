@@ -4,439 +4,512 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RASS Technology India Pvt. Ltd.</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Infrastructure & Capabilities</title>
+    <style>
+        :root {
+            /* Primary Colors */
+            --primary-green: #EF0524;
+            --primary-green-hover: #d90420;
+            --primary-green-dark: #c8031c;
+            --primary-green-darker: #a90218;
+            --dark-blue: #1b2253;
+            --dark-green: #1b2253;
+            --text-dark: #2c3e50;
 
+            /* Background Colors */
+            --bg-white: #fff;
+            --bg-light: #f8f9fa;
+            --bg-dark: #1a1a1a;
+            --bg-darker: #111;
+            --bg-card: #f2f4f6;
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+            /* Text Colors */
+            --text-primary: #1a1a1a;
+            --text-secondary: #666;
+            --text-light: #999;
+            --text-lighter: #9b9b9b;
+            --text-white: #fff;
+            --text-muted: #ccc;
+
+            /* Border Colors */
+            --border-light: #e0e0e0;
+            --border-lighter: #eee;
+            --border-dark: #ddd;
+            --border-card: #dde1de;
+
+            /* Accent Colors */
+            --accent-orange: #2c3e50;
+            --accent-orange-light: #2c3e50;
+
+            /* Card Background Colors */
+            --card-teal: #cce0ff;
+            --card-beige: #e26a6a;
+            --card-pink: #fff4b3;
+
+            /* Feature Colors */
+            --feature-light-bg: #f0f8ec;
+
+            /* Shadow */
+            --shadow-sm: 0 2px 7px 0 rgba(0, 0, 0, .07);
+            --shadow-md: 0 2px 12px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 4px 20px rgba(0, 0, 0, 0.2);
+            --shadow-xl: 0 8px 24px rgba(0, 0, 0, 0.1);
+            --shadow-2xl: 0 8px 32px rgba(0, 0, 0, 0.15);
+
+            /* Opacity Values */
+            --overlay-dark: rgba(0, 0, 0, 0.5);
+            --overlay-darker: rgba(0, 0, 0, 0.55);
+            --white-alpha-1: rgba(255, 255, 255, 0.05);
+            --white-alpha-2: rgba(255, 255, 255, 0.08);
+            --white-alpha-3: rgba(255, 255, 255, 0.1);
+            --white-alpha-4: rgba(255, 255, 255, 0.3);
+            --white-alpha-5: rgba(255, 255, 255, 0.8);
+            --white-alpha-6: rgba(255, 255, 255, 0.9);
+            --green-alpha: rgba(225, 116, 72, 0.1);
+            --green-alpha-light: rgba(217, 120, 87, 0.4);
+            --green-alpha-lighter: rgba(232, 107, 44, 0.1);
+            --green-alpha-fade: rgba(224, 129, 114, 0.3);
+            --black-alpha: rgba(0, 0, 0, 0.2);
+
+            /* Gradients */
+            --highlight-color: #ffdbcc;
+            --gradient-green: linear-gradient(135deg, var(--primary-green), var(--primary-green-hover));
+
+            /* Border Radius */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 20px;
+            --radius-2xl: 25px;
+            --radius-3xl: 30px;
+            --radius-4xl: 40px;
+            --radius-full: 50%;
+            --radius-66: 66px;
+
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            --spacing-sm: 1rem;
+            --spacing-md: 1.5rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 3rem;
+
+            /* Font Sizes */
+            --font-xs: 0.75rem;
+            --font-sm: 0.9rem;
+            --font-base: 1rem;
+            --font-lg: 1.1rem;
+            --font-xl: 1.5rem;
+            --font-2xl: 2rem;
+            --font-3xl: 2.5rem;
+            --font-4xl: 3.5rem;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-white);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-green);
+            color: var(--text-white);
+            padding: var(--spacing-xl) var(--spacing-md);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: var(--dark-blue);
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: var(--font-4xl);
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            line-height: 1.2;
+        }
+
+        .hero-description {
+            font-size: var(--font-lg);
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: var(--spacing-xl) var(--spacing-md);
+        }
+
+        /* Capabilities Grid */
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--spacing-lg);
+            margin-top: var(--spacing-xl);
+        }
+
+        /* Capability Card */
+        .capability-card {
+            background: var(--bg-white);
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-lighter);
+            position: relative;
+        }
+
+        .capability-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .card-header {
+            background: var(--dark-blue);
+            color: var(--text-white);
+            padding: var(--spacing-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: var(--white-alpha-1);
+            transform: rotate(45deg);
+        }
+
+        .card-header h3 {
+            font-size: var(--font-xl);
+            font-weight: 600;
+            margin-bottom: var(--spacing-xs);
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--primary-green);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--spacing-sm);
+            position: relative;
+            z-index: 1;
+        }
+
+        .card-icon::before {
+            content: '⚙';
+            font-size: var(--font-2xl);
+            color: var(--text-white);
+        }
+
+        .card-body {
+            padding: var(--spacing-lg);
+        }
+
+        .card-body p {
+            color: var(--text-secondary);
+            font-size: var(--font-base);
+            line-height: 1.7;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .card-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Feature Highlights */
+        .feature-highlight {
+            background: var(--green-alpha-lighter);
+            padding: var(--spacing-xs) var(--spacing-sm);
+            border-radius: var(--radius-sm);
+            font-size: var(--font-sm);
+            color: var(--primary-green-dark);
+            font-weight: 600;
+            display: inline-block;
+            margin-top: var(--spacing-sm);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: var(--bg-light);
+            padding: var(--spacing-xl) var(--spacing-md);
+            margin-top: var(--spacing-xl);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: var(--spacing-lg);
+            background: var(--bg-white);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stat-number {
+            font-size: var(--font-3xl);
+            font-weight: 700;
+            color: var(--primary-green);
+            margin-bottom: var(--spacing-xs);
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: var(--font-sm);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: var(--font-3xl);
+            }
+
+            .hero-description {
+                font-size: var(--font-base);
+            }
+
+            .capabilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .container {
+                padding: var(--spacing-lg) var(--spacing-sm);
+            }
+        }
+
+        /* Custom icons for each capability */
+        .capability-card:nth-child(1) .card-icon::before {
+            content: '⚙️';
+        }
+
+        .capability-card:nth-child(2) .card-icon::before {
+            content: '🔧';
+        }
+
+        .capability-card:nth-child(3) .card-icon::before {
+            content: '🔬';
+        }
+
+        .capability-card:nth-child(4) .card-icon::before {
+            content: '🔗';
+        }
+
+        .capability-card:nth-child(5) .card-icon::before {
+            content: '🔥';
+        }
+
+        .capability-card:nth-child(6) .card-icon::before {
+            content: '📐';
+        }
+
+        .capability-card:nth-child(7) .card-icon::before {
+            content: '💧';
+        }
+
+        .capability-card:nth-child(8) .card-icon::before {
+            content: '💪';
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
-        <div class="container-fluid">
-            <a class="navbar-brand " href="#">
-                <img src="img/logo-white.png" alt="logo">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-
-                    <li class="nav-item">
-                        <a class="nav-link " href="index.html">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link " href="about.html">About</a>
-                    </li>
-
-                    <!-- About Dropdown -->
-                    <!-- <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            About
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">About Us</a></li>
-                            <li><a class="dropdown-item" href="#">Leadership</a></li>
-                            <li><a class="dropdown-item" href="#">Careers</a></li>
-                        </ul>
-                    </li> -->
-
-                    <!-- Services Dropdown -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">
-                            Products
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="tube-assemblies.html">Tube Assemblies</a></li>
-                            <li><a class="dropdown-item" href="hose-assemblies.html"> Hose Assemblies</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="infrastructure.html">Infrastructure</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="technology.html">Technology</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="blog.html">Blog</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.html">News Media
-                        </a>
-                    </li>
-                </ul>
-
-                <a href="contact.html" class="btn btn-host">Contact Us</a>
-            </div>
-        </div>
-    </nav>
-
-
-    <section class="breadcrumb-section">
-        <div class="overlay"></div>
-
-        <div class="container text-center text-white position-relative">
-            <h1 class="page-title">Vacuum Pumps</h1>
-
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb justify-content-center bg-transparent p-0 m-0">
-                    <li class="breadcrumb-item">
-                        <a href="#">Home</a>
-                    </li>
-
-                    <li class="breadcrumb-item active" aria-current="page">
-                        Products
-                    </li>
-                </ol>
-            </nav>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Infrastructure & Capabilities</h1>
+            <p class="hero-description">
+                Our manufacturing infrastructure is built to support high-precision production, consistent quality, and
+                reliable scalability. Equipped with advanced CNC machinery, automated testing systems, and modern
+                inspection tools, our facility is designed to meet stringent OEM performance and safety standards. From
+                tube forming and hose assembly to brazing, welding, and final testing, every process is carried out
+                in-house under controlled conditions.
+            </p>
         </div>
     </section>
 
-
-    <section class="product-details">
-        <div class="container">
-            <div class="row  g-5">
-                <!-- Product Image -->
-                <div class="col-lg-5">
-                    <div class="product-img h-100">
-                        <img src="finalat4.webp" class="img-fluid" alt="EV Charger">
-                    </div>
+    <!-- Capabilities Section -->
+    <div class="container">
+        <div class="capabilities-grid">
+            <!-- CNC Pipe Bending -->
+            <div class="capability-card">
+                <div class="card-header">
+                    <div class="card-icon"></div>
+                    <h3>CNC Pipe Bending Machines</h3>
                 </div>
-
-                <!-- Product Content -->
-                <div class="col-lg-7">
-                    <div class="product-content">
-                        <h2 class="fw-bold">Commercial Electric Car Charger 60kw DC</h2>
-                        <div class="price">$2,550.00</div>
-
-                        <p class="product-description">
-                            We pride ourselves on going above and beyond for the customer on every project.
-                            Whether you're looking for a surveillance camera installation or an access control system.
-                            This high-performance DC charger is perfect for commercial applications.
-                        </p>
-
-                        <!-- Meta Info -->
-                        <ul class="product-meta list-unstyled">
-                            <li>
-                                <i class="fas fa-barcode"></i>
-                                <strong>SKU:</strong> <span>EV-DC-60KW</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-layer-group"></i>
-                                <strong>Categories:</strong> <span>EV Charger, Parking Sensor</span>
-                            </li>
-                            <li>
-                                <i class="fas fa-tags"></i>
-                                <strong>Tags:</strong> <span>Charger, Commercial EV, Retail</span>
-                            </li>
-                        </ul>
-
-                        <button class=" btn btn-subscribe" data-bs-toggle="modal" data-bs-target="#orderModal">
-                            <i class="fas fa-shopping-cart me-2"></i> Buy Now
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="tech-spec-section py-5 bg-light">
-        <div class="container">
-            <div class="table-area">
-
-                <!-- Heading -->
-                <div class="text-center mb-4">
-                    <h2 class="fw-bold display-6">Technical Specifications</h2>
-                    <p class="text-muted">
-                        Detailed specifications and features of the Roar Garbage
+                <div class="card-body">
+                    <p>Our CNC pipe bending machines enable precise and repeatable bending of tubes up to 63 mm
+                        diameter. These machines ensure high dimensional accuracy and smooth bends without deformation.
                     </p>
-                </div>
-
-                <!-- Card -->
-                <div class="card shadow-sm border-0">
-                    <div class="card-body">
-
-                        <h5 class="fw-bold mb-3">Vehicle Overview</h5>
-                        <hr>
-
-                        <div class="table-responsive">
-                            <table class="table table-bordered spec-table mb-0">
-                                <tbody>
-                                    <tr>
-                                        <th>Model Name</th>
-                                        <td>Roar (Garbage Collection Variant)</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Body Type</th>
-                                        <td>Closed Dustbin Compartment with Top Lid (Metal/FRP)</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Dustbin Capacity</th>
-                                        <td>500–600 Litres</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Chassis Material</th>
-                                        <td>Stainless Steel / Mild Steel</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Payload Capacity</th>
-                                        <td>500–550 Kg</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Top Speed</th>
-                                        <td>25 Kmph (Govt Compliant)</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Range / Charge</th>
-                                        <td>70–90 Km</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Charging Time</th>
-                                        <td>4–5 Hours (Li-ion), 8–10 Hours (Lead Acid)</td>
-                                    </tr>
-                                    <tr>
-                                        <th>Additional Features</th>
-                                        <td>Leak-proof body, foot pedal for lid operation</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                    </div>
+                    <p>They support complex geometries and tight tolerances required in automotive and industrial tube
+                        assemblies.</p>
+                    <span class="feature-highlight">Up to Ø 63 mm</span>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Order Form Modal -->
-    <div class="modal fade" id="orderModal" tabindex="-1" aria-labelledby="orderModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="orderModalLabel">
-                        <i class="fas fa-clipboard-list me-2"></i>Complete Your Order
-                    </h5>
-                    <button type="button" class="btn-close  " data-bs-dismiss="modal" aria-label="Close"></button>
+            <!-- CNC & NC Flaring -->
+            <div class="capability-card">
+                <div class="card-header">
+                    <div class="card-icon"></div>
+                    <h3>CNC & NC Flaring Machines</h3>
                 </div>
-                <div class="modal-body">
-                    <form id="orderForm">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <label for="name" class="form-label">
-                                    <i class="fas fa-user me-1"></i> Full Name *
-                                </label>
-                                <input type="text" class="form-control" id="name" name="name"
-                                    placeholder="Enter your full name" required>
-                            </div>
+                <div class="card-body">
+                    <p>CNC and NC flaring machines are used to produce consistent, high-quality tube end forms. These
+                        machines ensure accurate flaring angles and strong joint integrity.</p>
+                    <p>They enable reliable connections and leak-free performance in critical fluid systems.</p>
+                    <span class="feature-highlight">High Precision</span>
+                </div>
+            </div>
 
-                            <div class="col-md-6">
-                                <label for="email" class="form-label">
-                                    <i class="fas fa-envelope me-1"></i> Email Address *
-                                </label>
-                                <input type="email" class="form-control" id="email" name="email"
-                                    placeholder="your@email.com" required>
-                            </div>
+            <!-- Leak Testing -->
+            <div class="capability-card">
+                <div class="card-header">
+                    <div class="card-icon"></div>
+                    <h3>Automatic Leak Testing</h3>
+                </div>
+                <div class="card-body">
+                    <p>Our automatic leak testing systems verify the integrity of tube and hose assemblies under high
+                        pressure. Testing up to 12,000 PSI ensures zero leakage and operational safety.</p>
+                    <p>This process guarantees reliability in high-pressure hydraulic and fuel applications.</p>
+                    <span class="feature-highlight">Up to 12,000 PSI</span>
+                </div>
+            </div>
 
-                            <div class="col-md-6">
-                                <label for="phone" class="form-label">
-                                    <i class="fas fa-phone me-1"></i> Phone Number *
-                                </label>
-                                <input type="tel" class="form-control" id="phone" name="phone"
-                                    placeholder="+1 (555) 000-0000" required>
-                            </div>
-                            <div class="col-6">
-                                <label for="productName" class="form-label">
-                                    <i class="fas fa-box me-1"></i> Product Name
-                                </label>
-                                <input type="text" class="form-control" id="productName" name="productName" readonly>
-                            </div>
+            <!-- Hose Crimping -->
+            <div class="capability-card">
+                <div class="card-header">
+                    <div class="card-icon"></div>
+                    <h3>Hose Crimping & Testing</h3>
+                </div>
+                <div class="card-body">
+                    <p>Dedicated hose crimping and cutting machines ensure precise assembly and secure fittings. Proof
+                        testing validates the strength and pressure capability of each hose assembly.</p>
+                    <p>This ensures consistent quality, durability, and safe performance in service conditions.</p>
+                    <span class="feature-highlight">Proof Tested</span>
+                </div>
+            </div>
 
+            <!-- Brazing & Welding -->
+            <div class="capability-card">
+                <div class="card-header">
+                    <div class="card-icon"></div>
+                    <h3>Induction Brazing & Welding</h3>
+                </div>
+                <div class="card-body">
+                    <p>Induction brazing and welding facilities enable strong, uniform, and controlled joints. These
+                        processes provide excellent metallurgical bonding with minimal distortion.</p>
+                    <p>Ideal for high-strength and high-temperature applications requiring long-term durability.</p>
+                    <span class="feature-highlight">Advanced Joining</span>
+                </div>
+            </div>
 
-                            <div class="col-md-6">
-                                <label for="city" class="form-label">
-                                    <i class="fas fa-city me-1"></i> City *
-                                </label>
-                                <input type="text" class="form-control" id="city" name="city"
-                                    placeholder="Enter your city" required>
-                            </div>
+            <!-- CMM -->
+            <div class="capability-card">
+                <div class="card-header">
+                    <div class="card-icon"></div>
+                    <h3>CMM with Scanner</h3>
+                </div>
+                <div class="card-body">
+                    <p>Our Coordinate Measuring Machine (CMM) with scanner ensures precise dimensional inspection of
+                        components. It enables accurate measurement of complex geometries and profiles.</p>
+                    <p>This ensures compliance with design specifications and OEM quality requirements.</p>
+                    <span class="feature-highlight">3D Inspection</span>
+                </div>
+            </div>
 
-                            <div class="col-md-6">
-                                <label for="number" class="form-label">
-                                    <i class="fas fa-hashtag me-1"></i> Quantity
-                                </label>
-                                <input type="number" class="form-control" id="number" name="number" value="1" min="1"
-                                    required>
-                            </div>
+            <!-- Millipore Testing -->
+            <div class="capability-card">
+                <div class="card-header">
+                    <div class="card-icon"></div>
+                    <h3>Millipore Testing Facility</h3>
+                </div>
+                <div class="card-body">
+                    <p>The Millipore testing facility ensures cleanliness of fluid-carrying components. This testing
+                        verifies that assemblies meet contamination control standards.</p>
+                    <p>It is critical for hydraulic and fuel systems where cleanliness directly impacts performance and
+                        lifespan.</p>
+                    <span class="feature-highlight">Contamination Control</span>
+                </div>
+            </div>
 
-                            <div class="col-12">
-                                <label for="message" class="form-label">
-                                    <i class="fas fa-comment-dots me-1"></i> Additional Message
-                                </label>
-                                <textarea class="form-control" id="message" name="message" rows="4"
-                                    placeholder="Any special requirements or questions?"></textarea>
-                            </div>
-                        </div>
-
-                        <button type="submit" class="btn btn-subscribe mt-4">
-                            <i class="fas fa-check-circle me-2"></i> Submit Order
-                        </button>
-                    </form>
+            <!-- Tensile Testing -->
+            <div class="capability-card">
+                <div class="card-header">
+                    <div class="card-icon"></div>
+                    <h3>Tensile Testing & Inspection</h3>
+                </div>
+                <div class="card-body">
+                    <p>Tensile testing validates material strength and mechanical performance under load. Surface
+                        inspection ensures defect-free finishes and structural integrity.</p>
+                    <p>Together, these checks ensure durability, safety, and consistent product quality.</p>
+                    <span class="feature-highlight">Quality Assured</span>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-    <footer class="footer">
-        <div class="container">
-            <!-- Newsletter Section -->
-            <div class="row mb-5 g-4">
-                <div class="col-lg-5">
-                    <div class="footer-brand">
-                        <div class="d-flex align-items-center mb-3">
-
-                            <span class="footer-logo-text ms-2">RASS Technology India Pvt. Ltd.
-                            </span>
-                        </div>
-                        <p class="footer-brand-description">
-                            Contact RAAS Technology for engineering-driven manufacturing solutions.
-                        </p>
-
-                        <div class="working-hours">
-                            <h5 class="working-hours-title">Working Hours:</h5>
-                            <div class="hours-row">
-                                <span>Mon - Fri</span>
-                                <span>9:00 AM - 5:00 PM</span>
-                            </div>
-                            <div class="hours-row">
-                                <span>Saturday</span>
-                                <span>8:00 AM - 6:00 PM</span>
-                            </div>
-                            <div class="hours-row">
-                                <span>Sunday</span>
-                                <span>Closed</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-social mt-4 border-0">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    </div>
-                </div>
-
-
-                <div class="col-7">
-
-                    <div class="row g-5   justify-content-center">
-                        <div class="col-12">
-                            <div class="newsletter  p-0">
-                                <h3 class="newsletter-title">Subscribe To Our Newsletter To<br>Get Latest Update</h3>
-                                <form class="newsletter-form">
-                                    <input type="email" class="newsletter-input" placeholder="Enter email">
-                                    <button type="submit" class="btn btn-subscribe">Subscribe</button>
-                                </form>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <h5 class="footer-heading">Quick Links</h5>
-                            <ul class="footer-links">
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About Us</a></li>
-
-                                <li><a href="news.html"> News & Media</a></li>
-
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="contact.html">Contact</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <h5 class="footer-heading">Our Products</h5>
-                            <ul class="footer-links">
-                                <li><a href="tube-assemblies.html">Tube Assemblies
-                                    </a></li>
-                                <li><a href="hose-assemblies.html">Hose Assemblies
-                                    </a></li>
-
-                            </ul>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <h5 class="footer-heading">Official Info</h5>
-                            <ul class="footer-contact">
-                                <li>
-                                    <i class="fas fa-phone"></i>
-                                    <div>
-                                        <a href="tel:01296454165">0129-6454165</a>
-                                        <a href="tel:+01292307052">0129-2307052</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <i class="fas fa-envelope"></i>
-                                    <div>
-                                        <a href="mailto:raastech@gmail.com">raastech@gmail.com</a>
-                                        <a href="mailto:vikas@raasgroup.in">vikas@raasgroup.in</a>
-                                    </div>
-                                </li>
-                                <li>
-                                    <i class="fas fa-map-marker-alt"></i>
-                                    <div>
-                                        <span>
-                                            Plot No. 253, Sector-58,<br>
-                                            Industrial Area, Faridabad
-                                        </span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-
-
-
-                    </div>
-
-                </div>
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">63mm</div>
+                <div class="stat-label">Max Pipe Diameter</div>
             </div>
-            <!-- Social Media -->
-
-        </div>
-        </div>
-
-        <!-- Copyright -->
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <p class="copyright">© Copyright 2025 by <span class="text-green">Brandingwaale</span> All
-                            Rights
-                            Reserved.</p>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="footer-bottom-links">
-                            <a href="#">Support</a>
-                            <a href="#">Terms and Condition</a>
-                            <a href="#">Privacy and Policy</a>
-                        </div>
-                    </div>
-                </div>
+            <div class="stat-item">
+                <div class="stat-number">12,000</div>
+                <div class="stat-label">PSI Testing Capacity</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">In-House Manufacturing</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">8+</div>
+                <div class="stat-label">Advanced Capabilities</div>
             </div>
         </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+    </section>
 </body>
 
 </html>
