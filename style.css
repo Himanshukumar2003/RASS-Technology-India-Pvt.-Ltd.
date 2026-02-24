@@ -3510,3 +3510,7 @@ max-height: 400px;
             mix-blend-mode: multiply;
             -o-border-radius: 20px;
 }
+
+.modal-title{
+    color: var(--primary-green) !important;
+}
