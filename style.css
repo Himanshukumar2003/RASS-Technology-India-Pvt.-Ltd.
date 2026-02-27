@@ -3533,3 +3533,85 @@ max-height: 400px;
   filter: grayscale(0);
   opacity: 1;
 }
+
+
+
+
+
+/* GRID */
+.qi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 22px;
+}
+
+/* CARD */
+.qi-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    padding: 26px 24px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-lighter);
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    gap: 12px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+
+
+.qi-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+.qi-card:hover::after { opacity: 1; }
+
+.qi-card-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: var(--radius-md);
+    background: rgba(239,5,36,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.25s ease;
+    -webkit-transition: background 0.25s ease;
+    -moz-transition: background 0.25s ease;
+    -ms-transition: background 0.25s ease;
+    -o-transition: background 0.25s ease;
+}
+
+.qi-card:hover .qi-card-icon { background:  }
+
+.qi-card-icon svg {
+    width: 22px; height: 22px;
+    stroke: var(--primary-green);
+    fill: none;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: stroke 0.25s ease;
+}
+.qi-card:hover .qi-card-icon svg { stroke: var(--primary-green); }
+
+.qi-card-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    line-height: 1.25;
+}
+
+.qi-card-desc {
+    font-size: var(--font-sm);
+    color: var(--text-secondary);
+    line-height: 1.62;
+}
+
