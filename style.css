@@ -372,6 +372,8 @@ body {
     align-items: center;
     color: var(--text-white);
     padding: var(--spacing-lg);
+        padding-top: 120px;
+
 }
 
 .hero-subtitle {
@@ -1722,6 +1724,7 @@ color: #51f201;
     
     .hero-content {
         padding: var(--spacing-sm);
+        padding-top: auto;
     }
 
     .newsletter {
