@@ -3344,7 +3344,7 @@ max-height: 400px;
 
         .team-intro {
             background: var(--primary-green);
-            padding: 50px 40px;
+            padding: 40px ;
             border-radius: 8px 0px 0px 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
             -webkit-border-radius: 8px 0px 0px 8px;
@@ -3366,13 +3366,13 @@ max-height: 400px;
             width: 80px;
             height: 4px;
             background: white;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .team-intro p {
             color: white;
             line-height: 1.8;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             font-size: 1rem;
         }
 
@@ -3416,26 +3416,20 @@ max-height: 400px;
         }
 
         .team-image {
-            margin: 0 auto 25px;
+            
             overflow: hidden;
-          
-            display: flex;
-            align-items: end;
-            justify-content: center;
+             height: 100%;
         }
 
         .team-image img {
             width: 100%;
-            transform: scale(1.2);
-            width: 100%;
-            height: 100%;
+         
+          height: 100%;
+          
             mix-blend-mode: multiply;
-            object-fit: contain;
-            padding-top: 30px;
-            -webkit-transform: scale(1.2);
-            -moz-transform: scale(1.2);
-            -ms-transform: scale(1.2);
-            -o-transform: scale(1.2);
+            object-fit: cover;
+         
+         
 }
 
         .team-image.placeholder {
@@ -3449,9 +3443,9 @@ max-height: 400px;
         }
 
         .team-name {
-            font-size: 1.1rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            color: #1a1a1a;
+            color: var(--dark-blue);
             margin-bottom: 8px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
