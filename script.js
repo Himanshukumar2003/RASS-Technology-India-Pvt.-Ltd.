@@ -4,10 +4,10 @@ window.addEventListener("scroll", function () {
 
   if (window.scrollY > 100) {
     navbar.classList.add("scrolled");
-    logo.src = "img/logo.png"; // scroll ke baad
+    logo.src = "img/logo-white.png"; // scroll ke baad
   } else {
     navbar.classList.remove("scrolled");
-    logo.src = "img/logo-white.png"; // default
+    logo.src = "img/logo.png"; // default
   }
 });
 
