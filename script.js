@@ -11,7 +11,7 @@ window.addEventListener("scroll", function () {
   }
 });
 
-// Buy Now click → same product ke h2 se title uthao
+// Make Inquiry click → same product ke h2 se title uthao
 document.querySelector(".btn-buy-now").addEventListener("click", function () {
   const productContent = this.closest(".product-content");
   const productName = productContent
