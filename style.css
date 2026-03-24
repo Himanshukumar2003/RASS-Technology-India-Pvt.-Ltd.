@@ -1601,15 +1601,11 @@ height: 250px;
     background-color: var(--card-teal);
 }
 
-.card-teal i{
-    color: #005be8;
+.therapy-card i{
+    color: var(--primary-green) !important;
 }
-.card-beige i{
-color: #51f201;
-}
-.card-pink i{
-    color: #ffde1e;
-}
+
+
 .card-beige {
     background-color: var(--card-beige);
 }
@@ -3619,3 +3615,186 @@ max-height: 400px;
     line-height: 1.62;
 }
 
+.Our-Legacy {
+    font-family: var(--font-sans);
+}
+
+
+
+/* LEFT */
+.legacy-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--color-background-primary);
+}
+
+.legacy-tag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.legacy-tag .line {
+    width: 32px;
+    height: 2px;
+    background: #EF0524;
+}
+
+.tag-text {
+    font-size: 11px;
+    letter-spacing: 2.5px;
+    color: #EF0524;
+    text-transform: uppercase;
+}
+
+.legacy-title {
+    font-size: 35px;
+    color: #1b2253;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.legacy-desc {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+  
+}
+
+.legacy-footer {
+    display: flex;
+    align-items: center;
+    width: auto;
+    gap: 8px;
+    background-color: var(--highlight-color);
+    padding:  10px 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.legacy-footer .dot {
+    width: 8px;
+    height: 8px;
+    background: #EF0524;
+    border-radius: 50%;
+}
+
+/* RIGHT */
+.legacy-cards {
+   
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+/* CARD */
+.legacy-card {
+    flex: 1;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.legacy-card:hover {
+    transform: translateY(-5px);
+}
+
+/* WHITE CARD */
+.legacy-card.white {
+    background: #fff;
+    border: 1px solid #eee;
+}
+
+.legacy-card.white .badge {
+    background: #f0f3ff;
+    color: #1b2253;
+}
+
+/* RED CARD */
+.legacy-card.red {
+    background: #EF0524;
+    color: #fff;
+}
+
+.legacy-card.red .badge {
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+}
+
+/* COMMON */
+.legacy-card .circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    opacity: 0.07;
+}
+
+.legacy-card.white .circle {
+    background: #1b2253;
+    top: -30px;
+    right: -30px;
+}
+
+.legacy-card.red .circle {
+    background: #fff;
+    bottom: -30px;
+    right: -30px;
+}
+
+.legacy-card .badge {
+    font-size: 10px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.legacy-card h3 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.legacy-card p {
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.card-footer {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.card-footer .line {
+    width: 20px;
+    height: 2px;
+    background: currentColor;
+    opacity: 0.4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .legacy-wrapper {
+        flex-direction: column;
+    }
+
+    .legacy-cards {
+        width: 100%;
+    }
+}
