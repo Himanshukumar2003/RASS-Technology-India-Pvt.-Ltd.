@@ -2,7 +2,7 @@ window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".custom-navbar");
   const logo = document.querySelector(".navbar-brand img");
 
-  if (window.scrollY > 100) {
+  if (window.scrollY > 50) {
     navbar.classList.add("scrolled");
     logo.src = "img/logo-white.png"; // scroll ke baad
   } else {
