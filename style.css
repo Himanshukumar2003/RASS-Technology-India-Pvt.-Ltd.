@@ -1475,7 +1475,7 @@ height: 250px;
 .footer-contact span {
     color: var(--text-light);
     text-decoration: none;
-    font-size: 14px;
+    font-size: 13px;
     transition: all 0.3s ease;
 }
 
