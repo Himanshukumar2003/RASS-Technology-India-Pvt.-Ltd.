@@ -1520,6 +1520,13 @@ height: 250px;
     margin: 0;
 }
 
+.copyright a{
+
+
+    text-decoration: none;
+    color: var(--primary-green);
+}
+
 .text-green {
     color: var(--primary-green-dark);
 }
